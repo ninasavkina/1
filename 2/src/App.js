@@ -38,6 +38,7 @@ export default function SignIn() {
     const classes = useStyles();
 
     return (
+        <>
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
@@ -112,15 +113,15 @@ export default function SignIn() {
                         </Grid>
                     </Grid>
 
-                    <Grid item>
-                        <div>Don't have an account?</div>
-                        <Link href="https://www.facebook.com" target="_blank" variant="body2">
-                            {"Sing Up"}
-                        </Link>
-                    </Grid>
-
                 </form>
             </div>
         </Container>
+            <Grid item>
+                <div>Don't have an account?</div>
+                <Link href="https://www.facebook.com" target="_blank" variant="body2">
+                    {"Sing Up"}
+                </Link>
+            </Grid>
+        </>
     );
 }
