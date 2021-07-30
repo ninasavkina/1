@@ -1,5 +1,4 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -31,6 +30,12 @@ const useStyles = makeStyles((theme) => ({
     },
     email: {
         cursor: 'pointer',
+    },
+    grid: {
+        marginTop: theme.spacing(8),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     },
 }));
 
@@ -99,7 +104,7 @@ export default function SignIn() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        color="secondary"
+                        color="primary"
                         className={classes.submit}
                         cursor="pointer"
                     >
@@ -115,13 +120,13 @@ export default function SignIn() {
 
                 </form>
             </div>
-        </Container>
-            <Grid item>
-                <div>Don't have an account?</div>
-                <Link href="https://www.facebook.com" target="_blank" variant="body2">
-                    {"Sing Up"}
-                </Link>
-            </Grid>
+            </Container>
+                <Grid item className={classes.grid}>
+                    <div>Don't have an account?</div>
+                    <Link href="https://www.facebook.com" target="_blank" variant="body2">
+                        {"Sing Up"}
+                    </Link>
+                </Grid>
         </>
     );
 }
