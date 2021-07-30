@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
     },
+    Typo: {
+        margin: theme.spacing(3, 0, 2),
+        cursor: 'pointer',
+    },
 }));
 
 export default function SignIn() {
@@ -35,7 +39,7 @@ export default function SignIn() {
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-                <Typography component="h1" variant="h5" cursor="pointer">
+                <Typography className={classes.Typo} component="h1" variant="h5">
                     Sign in to your account
                 </Typography>
                 <form className={classes.form} noValidate>
