@@ -1,6 +1,18 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import './App.css'
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        '& .MuiTextField-root': {
+            margin: theme.spacing(1),
+            width: '25ch',
+        },
+    },
+}));
+
 
 function App() {
     return (
@@ -8,21 +20,22 @@ function App() {
             <form action="" method="get">
                 <p title="Sing in">Sign in to your account</p>
 
-                <div className="group">
-                    <label htmlFor="">E-mail</label>
-                    <input type="text" name="E-mail"/>
-                </div>
+                <TextField
+                    required
+                    id="filled-required"
+                    label="E-mail"
+                    variant="filled"
+                />
 
-                <div className="group">
-                    <label htmlFor="">Password:</label>
-                    <input type="password" name="password"/>
-                </div>
+                <br/>
 
-                <div className="group">
-                    <Button>Регистрация</Button>
-                </div>
-
-                <a href="https://www.google.com" target="_blank">Forgot your password?</a>
+                <TextField
+                    id="filled-password-input"
+                    label="Password"
+                    type="password"
+                    autoComplete="current-password"
+                    variant="filled"
+                />
 
             </form>
         </>
