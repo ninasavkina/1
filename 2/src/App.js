@@ -83,7 +83,7 @@ export default function SignIn() {
                         autoComplete="current-password"
                         maxlength="6"
                         inputProps={{
-                            maxlength: "6",
+                            minlength: "6",
                             style: {
                                 cursor: "pointer"
                             }
@@ -100,8 +100,6 @@ export default function SignIn() {
                         variant="contained"
                         color="secondary"
                         className={classes.submit}
-                        href="https://www.facebook.com"
-                        target="_blank"
                         cursor="pointer"
                     >
                         Continue
@@ -113,6 +111,14 @@ export default function SignIn() {
                             </Link>
                         </Grid>
                     </Grid>
+
+                    <Grid item>
+                        <div>Don't have an account?</div>
+                        <Link href="https://www.facebook.com" target="_blank" variant="body2">
+                            {"Sing Up"}
+                        </Link>
+                    </Grid>
+
                 </form>
             </div>
         </Container>
