@@ -26,8 +26,10 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
     },
-    Typo: {
-        margin: theme.spacing(3, 0, 2),
+    typo: {
+        cursor: 'pointer',
+    },
+    email: {
         cursor: 'pointer',
     },
 }));
@@ -39,11 +41,12 @@ export default function SignIn() {
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-                <Typography className={classes.Typo} component="h1" variant="h5">
+                <Typography className={classes.typo} component="h1" variant="h5">
                     Sign in to your account
                 </Typography>
-                <form className={classes.form} noValidate>
+                <form className={classes.form}>
                     <TextField
+                        input type="email"
                         variant="outlined"
                         margin="normal"
                         required
@@ -53,6 +56,11 @@ export default function SignIn() {
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        inputProps={{
+                            style: {
+                                cursor: "pointer"
+                            }
+                        }}
 
                     />
 
@@ -73,6 +81,13 @@ export default function SignIn() {
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        maxlength="6"
+                        inputProps={{
+                            maxlength: "6",
+                            style: {
+                                cursor: "pointer"
+                            }
+                        }}
                     />
 
                     <FormControlLabel
@@ -83,7 +98,7 @@ export default function SignIn() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                         className={classes.submit}
                         href="https://www.facebook.com"
                         target="_blank"
