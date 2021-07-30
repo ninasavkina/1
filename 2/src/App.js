@@ -45,6 +45,7 @@ export default function SignIn() {
     return (
         <>
         <Container component="main" maxWidth="xs">
+            <h1>Stackfindover</h1>
             <CssBaseline />
             <div className={classes.paper}>
                 <Typography className={classes.typo} component="h1" variant="h5">
@@ -122,7 +123,7 @@ export default function SignIn() {
             </div>
             </Container>
                 <Grid item className={classes.grid}>
-                    <div>Don't have an account?</div>
+                    <p>Don't have an account?</p>
                     <Link href="https://www.facebook.com" target="_blank" variant="body2">
                         {"Sing Up"}
                     </Link>
