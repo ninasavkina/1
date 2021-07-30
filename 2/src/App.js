@@ -19,12 +19,8 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
     },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
     form: {
-        width: '100%', // Fix IE 11 issue.
+        width: '100%',
         marginTop: theme.spacing(1),
     },
     submit: {
@@ -39,10 +35,7 @@ export default function SignIn() {
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-                <Avatar className={classes.avatar}>
-
-                </Avatar>
-                <Typography component="h1" variant="h5">
+                <Typography component="h1" variant="h5" cursor="pointer">
                     Sign in to your account
                 </Typography>
                 <form className={classes.form} noValidate>
@@ -56,6 +49,7 @@ export default function SignIn() {
                         name="email"
                         autoComplete="email"
                         autoFocus
+
                     />
 
                     <Grid item xs>
@@ -66,6 +60,7 @@ export default function SignIn() {
 
                     <TextField
                         variant="outlined"
+                        cursor="pointer"
                         margin="normal"
                         required
                         fullWidth
@@ -88,6 +83,7 @@ export default function SignIn() {
                         className={classes.submit}
                         href="https://www.facebook.com"
                         target="_blank"
+                        cursor="pointer"
                     >
                         Continue
                     </Button>
