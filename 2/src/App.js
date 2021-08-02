@@ -37,6 +37,17 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center'
     },
+    stack: {
+        marginTop: theme.spacing(8),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        fontFamily: 'Impact',
+        fontSize: '30px',
+        fontWeight: '700',
+        color: '#3d50b6'
+
+    },
 }));
 
 export default function SignIn() {
@@ -45,10 +56,11 @@ export default function SignIn() {
     return (
         <>
         <Container component="main" maxWidth="xs">
-            <h1>Stackfindover</h1>
+            <p className={classes.stack}>STACKFINDOVER</p>
+
             <CssBaseline />
             <div className={classes.paper}>
-                <Typography className={classes.typo} component="h1" variant="h5">
+                <Typography className={classes.typo} component="h1" variant="h6">
                     Sign in to your account
                 </Typography>
                 <form className={classes.form}>
