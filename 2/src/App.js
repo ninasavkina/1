@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         boxShadow: '0 0 10px rgba(0,0,0,0.5)',
-        padding: '15px',
+        padding: '30px',
         borderRadius: '5px'
     },
     form: {
@@ -126,7 +126,7 @@ export default function SignIn() {
                     >
                         Continue
                     </Button>
-                    <Grid container>
+                    <Grid container justify="center">
                         <Grid item>
                             <Link href="https://www.google.com.ua/maps/" target="_blank" variant="body2">
                                 {"Use single sing-on (Google) instead"}
