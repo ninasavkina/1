@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         boxShadow: '0 0 10px rgba(0,0,0,0.5)',
-        padding: '15px'
+        padding: '15px',
+        borderRadius: '5px'
     },
     form: {
         width: '100%',
