@@ -13,10 +13,12 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(3),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        boxShadow: '0 0 10px rgba(0,0,0,0.5)',
+        padding: '15px'
     },
     form: {
         width: '100%',
@@ -32,13 +34,13 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer',
     },
     grid: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(2),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center'
     },
     stack: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(6),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
